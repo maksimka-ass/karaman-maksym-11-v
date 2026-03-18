@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    padding: 25px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Блоки */
+.block {
+    width: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Заголовки блоків */
+.block h2 {
+    text-align: center;
+}
+
+/* Картки */
+.card {
+    background: #1f6feb;
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Фото */
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Текст */
+.card p {
+    padding: 10px;
+}
+
+/* Ряди */
+.row {
+    background: #1f6feb;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.row:hover {
+    background: #ff9800;
+}
+
+/* Контейнер місць */
+.seats {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Місця */
+.seat {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    background: #4caf50;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Вибране місце */
+.seat.selected {
+    background: red;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    background: rgba(0,0,0,0.3);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Кінотеатр</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>🎬 Кінотеатр</header>
+
+<div class="container">
+
+<!-- Вибір сеансів -->
+<div class="block">
+<h2>🎥 Вибір сеансів</h2>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba">
+<p>Аватар: Вогонь і попіл</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c">
+<p>Зоотрополіс 2</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f">
+<p>Сайлент Гілл: Повернення</p>
+</div>
+
+</div>
+
+<!-- Схема залу -->
+<div class="block">
+<h2>🪑 Схема залу</h2>
+
+<div class="row" onclick="toggleSeats(1)">1 ряд</div>
+<div class="seats" id="row1"></div>
+
+<div class="row" onclick="toggleSeats(2)">2 ряд</div>
+<div class="seats" id="row2"></div>
+
+<div class="row" onclick="toggleSeats(3)">3 ряд</div>
+<div class="seats" id="row3"></div>
+
+<div class="row" onclick="toggleSeats(4)">4 ряд</div>
+<div class="seats" id="row4"></div>
+
+<div class="row" onclick="toggleSeats(5)">5 ряд</div>
+<div class="seats" id="row5"></div>
+
+</div>
+
+<!-- Онлайн бар -->
+<div class="block">
+<h2>🍿 Онлайн-бар</h2>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585238342028-4c7c5d2e6f63">
+<p>Попкорн (солоний, сирний, карамель)</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a">
+<p>Напої (Pepsi, соки, кава, чай)</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+<p>Комбо-меню</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>© 2026 Кінотеатр</footer>
+
+<script>
+// створення місць
+for (let i = 1; i <= 5; i++) {
+    let row = document.getElementById("row" + i);
+
+    for (let j = 1; j <= 8; j++) {
+        let seat = document.createElement("div");
+        seat.classList.add("seat");
+
+        seat.onclick = function() {
+            seat.classList.toggle("selected");
+        };
+
+        row.appendChild(seat);
+    }
+}
+
+// відкриття ряду
+function toggleSeats(row) {
+    let el = document.getElementById("row" + row);
+    el.style.display = el.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
